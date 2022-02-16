@@ -6,8 +6,11 @@ namespace regto
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("regto");
+            Console.WriteLine("————————————————————————————————————————————\n");
+            
+            while ( !Process.Ask() ) ;
         }
     }
 }

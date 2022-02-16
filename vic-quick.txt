@@ -1,0 +1,60 @@
+# menu:
+move 1480 800 // Elegir (run)
+click
+wait 1000
+
+move 1380 860 // Elegir (team)
+click
+wait 700
+
+//move 860 610 // Fijar [first time only]
+//click
+wait 5000
+
+# map:
+move 1480 800 // Jugar
+click
+wait 14500
+
+# game:
+move 1530 480 // Fin
+click
+wait 11500
+
+move 950 480 // 2nd Skill
+click
+wait 500
+
+move 780 480 // 1st Skill
+click
+wait 200
+
+move 950 300 // 1st Character (of 3)
+click
+wait 200
+
+move 950 480 // 2nd Skill
+click
+wait 5000 // FARM TIME
+
+move 1530 480 // Fin
+click
+wait 11000
+click
+wait 1500
+click
+wait 5000
+
+# map:
+move 1100 500 // 2nd Loot
+click
+wait 800
+
+move 1120 820 // Loot CTA
+click
+wait 800
+
+
+//move Coger (loot) • click • wait 1.5
+//move Location (any/2) • click • 0.3
+//move Jugar • click • 14.5

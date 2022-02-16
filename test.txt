@@ -1,0 +1,24 @@
+# menu:
+move 500 500 // Elegir (run)
+click
+wait 2000
+
+move 940 540 // Elegir (team)
+click
+wait 700
+
+move 1000 680 // Fijar [first time only]
+//click
+wait 100
+
+click
+wait 100
+move 1000 700
+wait 100
+move 1000 800
+wait 100
+move 1000 1000
+
+# map:
+move 1300 800 // Jugar
+click
