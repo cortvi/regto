@@ -1,7 +1,7 @@
 #———————————————————————menu:
 move 1480 800 // Elegir (run)
 click
-wait 1000
+wait 3000
 
 move 1380 860 // Elegir (team)
 click
@@ -37,7 +37,12 @@ wait 1000
 
 move 950 480 // 2nd Skill
 click
-wait 5000 // FARM TIME
+wait 600000 // FARM TIME
+click
+wait 600000 // FARM TIME
+click
+wait 600000 // FARM TIME
+click
 
 move 1530 480 // Fin
 click
@@ -111,7 +116,12 @@ wait 1000
 
 move 950 480 // 2nd Skill
 click
-wait 5000 // FARM TIME
+wait 600000 // FARM TIME
+click
+wait 600000 // FARM TIME
+click
+wait 600000 // FARM TIME
+click
 
 move 1530 480 // Fin
 click
@@ -185,7 +195,12 @@ wait 1000
 
 move 950 480 // 2nd Skill
 click
-wait 5000 // FARM TIME
+wait 600000 // FARM TIME
+click
+wait 600000 // FARM TIME
+click
+wait 600000 // FARM TIME
+click
 
 move 1530 480 // Fin
 click
@@ -243,7 +258,12 @@ wait 1000
 
 move 950 480 // 2nd Skill
 click
-wait 5000 // FARM TIME
+wait 600000 // FARM TIME
+click
+wait 600000 // FARM TIME
+click
+wait 600000 // FARM TIME
+click
 
 move 1530 480 // Fin
 click
@@ -280,3 +300,6 @@ click
 wait 4000
 
 restart
+
+# exp: 487 → 663
+# lvl: 171 → 174

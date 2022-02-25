@@ -7,6 +7,9 @@ namespace regto
 {
     internal static class Process
     {
+        private static bool restartFlag = false;
+        private static string[] fileLines = null;
+
         internal static bool Ask ()
         {
             Console.Write("\n~> Enter a command: ");
@@ -14,7 +17,10 @@ namespace regto
             switch (command[0])
             {
                 case "start":
-                    Start(command[1]);
+                    do Start(command[1]);
+                    while (restartFlag);
+                    restartFlag = false;
+                    fileLines = null;
                     break;
 
                 case "move":
@@ -33,6 +39,19 @@ namespace regto
             return false;
         }
 
+        static void Start (string file)
+        {
+            fileLines = fileLines ?? File.ReadAllLines(file);
+            foreach (string line in fileLines)
+            {
+                if ( GetCommand(line, out string[] command) )
+                {
+                    Console.WriteLine("Command → " + string.Join(' ', command) );
+                    Execute(command);
+                }
+            }
+        }
+
         static void MoveTo (string[] command)
         {
             int x = int.Parse(command[1]);
@@ -44,19 +63,6 @@ namespace regto
         {
             int time = int.Parse(command[1]);
             Thread.Sleep(time);
-        }
-
-        static void Start (string file)
-        {
-            string[] commands = File.ReadAllLines(file);
-            foreach (string line in commands)
-            {
-                if ( GetCommand(line, out string[] command) )
-                {
-                    Console.WriteLine("Command → " + string.Join(' ', command) );
-                    Execute(command);
-                }
-            }
         }
 
         static void Execute (string[] command)
@@ -73,6 +79,10 @@ namespace regto
 
                 case "wait":
                     Sleep(command);
+                    break;
+
+                case "restart":
+                    restartFlag = true;
                     break;
 
                 default:
